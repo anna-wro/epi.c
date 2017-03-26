@@ -1,4 +1,4 @@
-###**Ćwiczenie 1**
+### **Ćwiczenie 1**
 
 1. Zapoznaj się z programem zad1.c, skompiluj go i uruchom.
 
@@ -12,7 +12,7 @@
      gdzie w powyższym n - liczba bitów. Wzorując się na zad1.c, napisz własny program, w którym utwórz po 1 zmiennej każdego z ww. typów i sprawdź za pomocą operatora **sizeof** jej długość (w bajtach). Następnie, używając kalkulatora lub suwaka logarytmicznego oblicz, jakie zakresy liczb poszczególne typy mogą reprezentować (**1 bajt = 8 bitów**).  
 3. Zapoznaj się z dokumentacją funkcji [printf()](http://www.cplusplus.com/reference/cstdio/printf/). Jest tam opisany sposób tworzenia kodów formatujących dla poszczególnych typów danych (wyrażenia zaczynające się od znaku %). Rozbuduj swój program z poprzedniego punktu tak, że każdej utworzonej zmiennej nadaj jakąś wartość, a następnie wypisz tą wartość na ekran za pomocą printf(). Zrób tak, że wartości wszystkich tych zmiennych były wypisane przez pojedyncze wywołanie funkcji printf().
 
-###**Ćwiczenie 2**
+### **Ćwiczenie 2**
 
 1. Zapoznaj się z programem zad2.c, skompiluj go i uruchom.
 2. Dopisz do programu wykonanie następujących działań: * (mnożenie), / (dzielenie), % (modulo). Skompiluj i przetestuj z następującymi danymi:
@@ -25,7 +25,7 @@
    * Wprowadź dwie liczby takie, żeby ich suma lub iloczyn przekroczyły zakres reprezentacji dla typu int.
 
 
-###**Ćwiczenie 3**
+### **Ćwiczenie 3**
 
 1. Poleceniem
 
@@ -41,6 +41,6 @@
   * Wprowadź dwie liczby ułamkowe. Czy scanf() reaguje teraz prawidłowo i czy wynik jest dobry?
   * Jako liczbę b wprowadź zero. Jak teraz program się zachowuje?
 
-###**Ćwiczenie 4**
+### **Ćwiczenie 4**
 
 Zapoznaj się z programem zad4.c. Skompiluj i przetestuj używając różnych danych wejściowych, aby przekonać się, jak działa automatyczna (czyli niejawna) konwersja typów. Wprowadź także takie dane, które spowodują przepełnienie typów `int`, `short` i `char`.
