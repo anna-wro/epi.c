@@ -45,13 +45,13 @@ $ ./a.out
 
 1. W pliku [cw3.c](https://github.com/anna-wro/epi.c/blob/master/03.%20wyra%C5%BCenia%20warunkowe%20i%20p%C4%99tle/cw3.c) znajduje się prosty przykład pętli. Zapoznaj się z treścią. O zmiennej i mówimy, że jest licznikiem pętli. Skompiluj i uruchom.
 2. Zrób kopię pliku cw3.c. Zmodyfikuj teraz wartość początkową licznika i warunek pętli tak, żeby pojawiły się liczby od 3 do 20. Skompiluj i uruchom.
-3. Zrób kopię pliku cw3.c. Wyrażenie ++i oznacza zwiększ i o 1. To ono powoduje, że licznik pętli za każdym razem się zwiększa. Zamiast ++i można napisać i++ albo i += 1 albo i = i + 1. Wypróbuj te możliwości. Następnie, przetestuj kod, w którym licznik pętli zwiększa się o 2, o 3, o 4 itd.
+3. Zrób kopię pliku cw3.c. Wyrażenie `++i` oznacza zwiększ i o 1. To ono powoduje, że licznik pętli za każdym razem się zwiększa. Zamiast `++i` można napisać `i++` albo `i += 1` albo `i = i + 1`. Wypróbuj te możliwości. Następnie, przetestuj kod, w którym licznik pętli zwiększa się o 2, o 3, o 4 itd.
 4. Zrób kopię pliku cw3.c. Wyrażenie --i będzie zmniejszać i o jeden. Zastanów się, jaką wartość początkową i warunek pętli należy ustanowić, aby wypisać liczby od 15 do 0 (włącznie)? Skompiluj i przetestuj.
 
 ### **Ćwiczenie 4:**
 
 1. Zrób kopię pliku cw3.c. Umieść wewnątrz pętli warunek, żeby liczba była wypisana tylko, jeśli jest nieparzysta.
-2. Zrób kopię pliku cw3.c. Zmień zakres liczb na od 11 do 99, ale po liczbach 20, 30, 40 ... 90 wypisz znak nowej linii - symbol \n w printf().
+2. Zrób kopię pliku cw3.c. Zmień zakres liczb na od 11 do 99, ale po liczbach 20, 30, 40 ... 90 wypisz znak nowej linii - symbol `\n` w `printf()`.
 
 ### **Ćwiczenie 5:**
 
