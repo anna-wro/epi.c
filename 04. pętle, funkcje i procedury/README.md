@@ -113,38 +113,43 @@ $ ./a.out
 
 ### **Ćwiczenie 5:**
 
-Procedura jest to struktura programu podobna do funkcji, ale nie zwracająca żadnej wartości, ponieważ wykonuje innego typu czynność niż obliczanie wyniku. Procedurę tworzy się tak samo jak funkcję, ale używa się słowa void (ang. pusty) przed jej nazwą.
+Procedura jest to struktura programu podobna do funkcji, ale nie zwracająca żadnej wartości, ponieważ wykonuje innego typu czynność niż obliczanie wyniku. Procedurę tworzy się tak samo jak funkcję, ale używa się słowa `void` (ang. pusty) przed jej nazwą.
 
-Napisz program, który zawiera procedurę void rysuj(int rozmiar) która w zaleznosci od wartości argumentu rozmiar rysuje na ekranie wzorek:
+Napisz program, który zawiera procedurę `void rysuj(int rozmiar)` która w zaleznosci od wartości argumentu rozmiar rysuje na ekranie wzorek:
 
 1:
 
-*
+    *
+
 2:
 
- * 
-***
- *
+     * 
+    ***
+     *
+ 
 3:
 
-  *  
- *** 
-*****
- *** 
-  *  
+      *  
+     *** 
+    *****
+     *** 
+      *  
+  
 (...)
 6:
 
-     *     
-    ***    
-   *****   
-  *******  
- ********* 
-***********
- ********* 
-  *******  
-   *****   
-    ***    
-     *     
+         *     
+        ***    
+       *****   
+      *******  
+     ********* 
+    ***********
+     ********* 
+      *******  
+       *****   
+        ***    
+         *   
+     
 itd.
-Dopisz odpowiednią funkcję main(), która pobiera od użytkownika jedną liczbę całkowitą i wywołuje procedurę rysuj() z tą liczbą.
+
+Dopisz odpowiednią funkcję `main()`, która pobiera od użytkownika jedną liczbę całkowitą i wywołuje procedurę `rysuj()` z tą liczbą.
