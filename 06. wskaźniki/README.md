@@ -1,11 +1,12 @@
-Ćwiczenie 1:
+### Ćwiczenie 1:
 
-Plik cw1.c demonstruje użycie wskaźników.
+Plik [cw1.c](https://github.com/anna-wro/epi.c/blob/master/06.%20wska%C5%BAniki/cw1.c) demonstruje użycie wskaźników.
 
-Analizę pliku rozpocznij od funkcji main() i użytego w niej wskaźnika p.
-Następnie przyjrzyj się, w jaki sposób funkcja zeruj() jest zdolna, żeby zmienić wartość zmiennej, która do niej nie należy.
-Teraz zastanów się, co trzeba zmienić w funkcji zamien(), żeby ona była w stanie zamienić dwie zmienne ich wartościami, tzn. jeśli początkowo np. a = 1, b = 2, to po użyciu funkcji zamien() powinno być a = 2, b = 1.
-Ćwiczenie 2:
+1. Analizę pliku rozpocznij od funkcji `main()` i użytego w niej wskaźnika p.
+2. Następnie przyjrzyj się, w jaki sposób funkcja `zeruj()` jest zdolna, żeby zmienić wartość zmiennej, która do niej nie należy.
+3. Teraz zastanów się, co trzeba zmienić w funkcji `zamien()`, żeby ona była w stanie zamienić dwie zmienne ich wartościami, tzn. jeśli początkowo np.` a = 1`, `b = 2`, to po użyciu funkcji `zamien()` powinno być `a = 2`, `b = 1`.
+
+### Ćwiczenie 2:
 
 Gdy rezultatem obliczeń w funkcji jest pojedyncza liczba, wtedy można ją łatwo przesłać jako wartość funkcji, za pomocą słowa return. Ale co zrobić, gdy rezultatem obliczeń jest więcej niż jedna liczba? Można wykorzystać wskaźniki do zwrócenia większej liczby wyników.
 
