@@ -27,10 +27,10 @@ Ponieważ program potrzebuje funkcji `sqrt()` z biblioteki `math.h`, dlatego trz
 
 Wskaźniki mogą być wykorzystane do adresowania komórek tablic i w związku z tym oferują bardzo użyteczną _arytmetykę wskaźników_. Reguły są następujące:
 
-* Dla wskaźnika np.int * t, wyrażenie t+5 jest wskaźnikiem na wartość typu int pod adresem 5 długości int dalej niż t. Analogicznie, dla double * r wyrażenie r - 100 oznacza wskaźnik na wartość typu double pod adresem 100 długości double wcześniej niż r. Działają też operatory ++ i -- przesuwające wskaźnik na następny adres jego typu.
-* Dla wskaźników tego samego typu, np. short *p, *q, wyrażenie q - p oznacza liczbę, o ile odległości short jeden wskaźnik różni się od drugiego.
+* Dla wskaźnika np.int * t, wyrażenie t+5 jest wskaźnikiem na wartość typu int pod adresem 5 długości int dalej niż t. Analogicznie, dla `double * r` wyrażenie `r - 100` oznacza wskaźnik na wartość typu double pod adresem 100 długości double wcześniej niż r. Działają też operatory ++ i -- przesuwające wskaźnik na następny adres jego typu.
+* Dla wskaźników tego samego typu, np. `short *p, *q`, wyrażenie `q - p` oznacza liczbę, o ile odległości short jeden wskaźnik różni się od drugiego.
 * Wskaźniki można porównywać na ich adresy operatorami ==, <, >, <=, >=, !=.
-* W przypadku tablicy, np. int A[10]; symbol A jest jednocześnie wskaźnikiem na jej pierwszy element, tzn. np. *A oznacza A[0], a np. *(A+5) oznacza A[5]. Działa to też w drugą stronę, czyli &A[0] oznacza A, zaś &A[5] oznacza A+5.
+* W przypadku tablicy, np. `int A[10];` symbol A jest jednocześnie wskaźnikiem na jej pierwszy element, tzn. np. `*A` oznacza `A[0]`, a np. `*(A+5)` oznacza `A[5]`. Działa to też w drugą stronę, czyli `&A[0]` oznacza `A`, zaś `&A[5]` oznacza `A+5`.
 
 Napisz funkcję, która obliczy średnią arytmetyczną z elementów w tablicy, mając za argumenty jedynie 2 wskaźniki: do pierwszego i ostatniego elementu tablicy. Tablica powinna być typu double, a funkcja postaci `double srednia(double * poczatek, double * koniec)`.
 
@@ -64,9 +64,9 @@ ewentualnie, wariant ze wskaźnikiem może być zapisany tak:
     // *i to jest dostęp do elementu tablicy
     }
 
-Ćwiczenie 4:
+### Ćwiczenie 4:
 
-Plik cw4.c zawiera pasjonującą, głęboką i wciągającą grę komputerową. Zdobywca głównego skarbu otrzymuje 8 trylionów punktow!
+Plik [cw4.c](https://github.com/anna-wro/epi.c/blob/master/06.%20wska%C5%BAniki/cw4.c) zawiera pasjonującą, głęboką i wciągającą grę komputerową. Zdobywca głównego skarbu otrzymuje 8 trylionów punktow!
 
 Po uruchomieniu gra wyświetla planszę o wymiarach 9x9. Pozycja gracza sygnalizowana jest literą G, natomiast pozycja skarbu literą S. Do poruszania się po planszy najwygodniejsza jest klawiatura numeryczna (Num Lock musi być włączony) - klawisze 8, 6, 2, 4 odpowiadają ruchom gracza na planszy (po każdej liczbie należy nacisnąć Enter). Gra kończy się po zdobyciu skarbu.
 
@@ -74,16 +74,19 @@ Mimo, że gra toczy się na dwuwymiarowej planszy 9x9, gra zaimplementowana jest
 
 Spróbuj rozbudować grę na następujące sposoby:
 
-Dodaj graczowi możliwość wykonywania ruchów diagonalnych, tzn. "po skosie", czyli z równoczesną zmianą współrzędnej x i y. Najlepiej użyć do tego liczb odpowiednio 9, 3, 1, 7.
-Dodaj zmienne globalne wysokość i szerokość. Zrób tak, żeby użytkownik na początku mógł wpisać wymiary planszy, na której chce grać. Popraw kod we wszystkich niezbędnych miejscach, żeby nie działał na ustalonej planszy 9x9, tylko na planszy o ustalonej przez użytkownika wysokości i szerokości.
-Dodaj pająka P, który strzeże skarbu. Pająk, który będzie kontrolowany następującą formułą:
-if(graczx < pajakx) pajakx--;
-if(graczx > pajakx) pajakx++;
-if(graczy < pajaky) pajaky--;
-if(graczy > pajaky) pajaky++;
-będzie zawsze szedł w kierunku gracza. W takim przypadku zdobycie skarbu będzie niemożliwe. Aby dać graczowi szansę, zrób tak, żeby pająk robił swój ruch co dwa ruchy gracza.
-Alternatywnie, zamiast spowalniać pająka, gracz może mieć ze sobą muchę, którą poczęstuje pająka i zablokuje go tym na 3 ruchy, co powinno wystarczyć na to, by dotrzeć do skarbu.
-Plik gra zawiera dla przykładu skompilowaną wersję gry z ruchami diagonalnymi, ustalaną szerokością i wysokością oraz pająkiem powolnym, ale bez muchy. Plik został skompilowany na wierzbie, ale działa na komputerach w pracowni (pod Linuksem). Studenci korzystający z Windowsa powinni przy użyciu SSH (np. PuTTy) zalogować się na swoje konto na wierzbie i tam uruchomić plik gra.
+1. Dodaj graczowi możliwość wykonywania ruchów diagonalnych, tzn. "po skosie", czyli z równoczesną zmianą współrzędnej x i y. Najlepiej użyć do tego liczb odpowiednio 9, 3, 1, 7.
+2. Dodaj zmienne globalne wysokość i szerokość. Zrób tak, żeby użytkownik na początku mógł wpisać wymiary planszy, na której chce grać. Popraw kod we wszystkich niezbędnych miejscach, żeby nie działał na ustalonej planszy 9x9, tylko na planszy o ustalonej przez użytkownika wysokości i szerokości.
+3. Dodaj pająka P, który strzeże skarbu. Pająk, który będzie kontrolowany następującą formułą:
+
+        if(graczx < pajakx) pajakx--;
+        if(graczx > pajakx) pajakx++;
+        if(graczy < pajaky) pajaky--;
+        if(graczy > pajaky) pajaky++;
+
+ będzie zawsze szedł w kierunku gracza. W takim przypadku zdobycie skarbu będzie niemożliwe. Aby dać graczowi szansę, zrób tak, żeby pająk robił swój ruch co dwa ruchy gracza.
+4. Alternatywnie, zamiast spowalniać pająka, gracz może mieć ze sobą muchę, którą poczęstuje pająka i zablokuje go tym na 3 ruchy, co powinno wystarczyć na to, by dotrzeć do skarbu.
+
+Plik [gra](https://github.com/anna-wro/epi.c/blob/master/06.%20wska%C5%BAniki/gra) zawiera dla przykładu skompilowaną wersję gry z ruchami diagonalnymi, ustalaną szerokością i wysokością oraz pająkiem powolnym, ale bez muchy. Plik został skompilowany na wierzbie, ale działa na komputerach w pracowni (pod Linuksem). Studenci korzystający z Windowsa powinni przy użyciu SSH (np. PuTTy) zalogować się na swoje konto na wierzbie i tam uruchomić plik gra.
 
 Uwaga, po ściągnięciu pliku gra do danego katalogu należy nadać temu plikowi uprawnienia do wykonania, co można zrobić poleceniem:
-chmod u+x gra
+`chmod u+x gra`
