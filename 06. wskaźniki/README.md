@@ -27,7 +27,7 @@ Ponieważ program potrzebuje funkcji `sqrt()` z biblioteki `math.h`, dlatego trz
 
 Wskaźniki mogą być wykorzystane do adresowania komórek tablic i w związku z tym oferują bardzo użyteczną _arytmetykę wskaźników_. Reguły są następujące:
 
-* Dla wskaźnika np.int * t, wyrażenie t+5 jest wskaźnikiem na wartość typu int pod adresem 5 długości int dalej niż t. Analogicznie, dla `double * r` wyrażenie `r - 100` oznacza wskaźnik na wartość typu double pod adresem 100 długości double wcześniej niż r. Działają też operatory ++ i -- przesuwające wskaźnik na następny adres jego typu.
+* Dla wskaźnika np. `int * t`, wyrażenie `t+5` jest wskaźnikiem na wartość typu int pod adresem 5 długości int dalej niż t. Analogicznie, dla `double * r` wyrażenie `r - 100` oznacza wskaźnik na wartość typu double pod adresem 100 długości double wcześniej niż r. Działają też operatory ++ i -- przesuwające wskaźnik na następny adres jego typu.
 * Dla wskaźników tego samego typu, np. `short *p, *q`, wyrażenie `q - p` oznacza liczbę, o ile odległości short jeden wskaźnik różni się od drugiego.
 * Wskaźniki można porównywać na ich adresy operatorami ==, <, >, <=, >=, !=.
 * W przypadku tablicy, np. `int A[10];` symbol A jest jednocześnie wskaźnikiem na jej pierwszy element, tzn. np. `*A` oznacza `A[0]`, a np. `*(A+5)` oznacza `A[5]`. Działa to też w drugą stronę, czyli `&A[0]` oznacza `A`, zaś `&A[5]` oznacza `A+5`.
