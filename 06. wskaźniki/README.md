@@ -10,51 +10,60 @@ Plik [cw1.c](https://github.com/anna-wro/epi.c/blob/master/06.%20wska%C5%BAniki/
 
 Gdy rezultatem obliczeń w funkcji jest pojedyncza liczba, wtedy można ją łatwo przesłać jako wartość funkcji, za pomocą słowa return. Ale co zrobić, gdy rezultatem obliczeń jest więcej niż jedna liczba? Można wykorzystać wskaźniki do zwrócenia większej liczby wyników.
 
-Plik cw2.c posiada funkcję rozwiązującą równania kwadratowe. Pojawia się tam problem różnej liczby wyników z jednej funkcji. Rozwiązaniem równania kwadratowego będzie zero, jedna lub dwie liczby. Funkcja kwadratowe pobiera dane typu zmiennoprzecinkowego (double) i zwraca rozwiązania równania również tego typu, poprzez wskaźniki x1 i x2, ale dodatkowo zwraca także wartość typu int, która informuje nas o tym, który przypadek zaistniał:
+Plik [cw2.c](https://github.com/anna-wro/epi.c/blob/master/06.%20wska%C5%BAniki/cw2.c) posiada funkcję rozwiązującą równania kwadratowe. Pojawia się tam problem różnej liczby wyników z jednej funkcji. Rozwiązaniem równania kwadratowego będzie zero, jedna lub dwie liczby. Funkcja kwadratowe pobiera dane typu zmiennoprzecinkowego (`double`) i zwraca rozwiązania równania również tego typu, poprzez wskaźniki x1 i x2, ale dodatkowo zwraca także wartość typu int, która informuje nas o tym, który przypadek zaistniał:
 
-Jeśli a == 0.0 to nie jest to równanie kwadratowe. Funkcja sygnalizuje to wartością -1.
-Jeśli Δ < 0, równanie nie ma rozwiązań. Funkcja sygnalizuje to wartością 0.
-Jeśli Δ == 0, równanie ma 1 rozwiązanie. Funkcja zapisuje to rozwiązanie do zmiennej pod wskaźnikiem x1, a następnie kończy wartością 1.
-Jeśli Δ > 0, równanie ma 2 rozwiązania. Funkcja zapisuje te rozwiązania do zmiennych pod wskaźnikami x1 oraz x2 i kończy wartością 2.
-Uzupełnij program tak, aby funkcja main() wywoływała funkcję kwadratowe(), a następnie, w zależności od przypadku, wyświetlała na ekranie stosowny komunikat i wyniki.
+1. Jeśli a == 0.0 to nie jest to równanie kwadratowe. Funkcja sygnalizuje to wartością -1.
+2. Jeśli Δ < 0, równanie nie ma rozwiązań. Funkcja sygnalizuje to wartością 0.
+3. Jeśli Δ == 0, równanie ma 1 rozwiązanie. Funkcja zapisuje to rozwiązanie do zmiennej pod wskaźnikiem x1, a następnie kończy wartością 1.
+4. Jeśli Δ > 0, równanie ma 2 rozwiązania. Funkcja zapisuje te rozwiązania do zmiennych pod wskaźnikami x1 oraz x2 i kończy wartością 2.
 
-Następnie dodaj do funkcji kwadratowe() zdolność obliczania punktu wierzchołkowego paraboli, za pomocą wzorów: p = -b/2a i q = -Δ/4a, zwróć ten punkt do main() w jakiś sposób i wyświetl go na ekranie razem z pozostałymi informacjami.
+Uzupełnij program tak, aby funkcja `main()` wywoływała funkcję `kwadratowe()`, a następnie, w zależności od przypadku, wyświetlała na ekranie stosowny komunikat i wyniki.
 
-Ponieważ program potrzebuje funkcji sqrt() z biblioteki math.h, dlatego trzeba kompilować z przełącznikiem -lm. W przeciwnym razie dostaniemy błąd linkera - nieodnalezienia funkcji sqrt().
-Ćwiczenie 3:
+Następnie dodaj do funkcji `kwadratowe(`) zdolność obliczania punktu wierzchołkowego paraboli, za pomocą wzorów: p = -b/2a i q = -Δ/4a, zwróć ten punkt do `main()` w jakiś sposób i wyświetl go na ekranie razem z pozostałymi informacjami.
 
-Wskaźniki mogą być wykorzystane do adresowania komórek tablic i w związku z tym oferują bardzo użyteczną arytmetykę wskaźników. Reguły są następujące:
+Ponieważ program potrzebuje funkcji `sqrt()` z biblioteki `math.h`, dlatego trzeba kompilować z przełącznikiem `-lm`. W przeciwnym razie dostaniemy błąd linkera - nieodnalezienia funkcji `sqrt()`.
 
-Dla wskaźnika np.int * t, wyrażenie t+5 jest wskaźnikiem na wartość typu int pod adresem 5 długości int dalej niż t. Analogicznie, dla double * r wyrażenie r - 100 oznacza wskaźnik na wartość typu double pod adresem 100 długości double wcześniej niż r. Działają też operatory ++ i -- przesuwające wskaźnik na następny adres jego typu.
-Dla wskaźników tego samego typu, np. short *p, *q, wyrażenie q - p oznacza liczbę, o ile odległości short jeden wskaźnik różni się od drugiego.
-Wskaźniki można porównywać na ich adresy operatorami ==, <, >, <=, >=, !=.
-W przypadku tablicy, np. int A[10]; symbol A jest jednocześnie wskaźnikiem na jej pierwszy element, tzn. np. *A oznacza A[0], a np. *(A+5) oznacza A[5]. Działa to też w drugą stronę, czyli &A[0] oznacza A, zaś &A[5] oznacza A+5.
-Napisz funkcję, która obliczy średnią arytmetyczną z elementów w tablicy, mając za argumenty jedynie 2 wskaźniki: do pierwszego i ostatniego elementu tablicy. Tablica powinna być typu double, a funkcja postaci double srednia(double * poczatek, double * koniec).
+### Ćwiczenie 3:
 
-Przykładowo, dla tablicy double A[20], wywołanie srednia(A,A+19) powinno dać wynik średniej dla całej tablicy, ale wywołanie srednia(A+3,A+5) powinno wyciągnąć średnią jedynie z komórek A[3], A[4], A[5]. Dzięki arytmetyce wskaźników, można w pętli iterować przy użyciu wskaźnika, tak jak przy użyciu liczby, np.
-int A[10];
-int * i;
+Wskaźniki mogą być wykorzystane do adresowania komórek tablic i w związku z tym oferują bardzo użyteczną _arytmetykę wskaźników_. Reguły są następujące:
 
-for(i = A; i < A+10; ++i)
-{
-// *i to jest dostęp do elementu tablicy
-}
+* Dla wskaźnika np.int * t, wyrażenie t+5 jest wskaźnikiem na wartość typu int pod adresem 5 długości int dalej niż t. Analogicznie, dla double * r wyrażenie r - 100 oznacza wskaźnik na wartość typu double pod adresem 100 długości double wcześniej niż r. Działają też operatory ++ i -- przesuwające wskaźnik na następny adres jego typu.
+* Dla wskaźników tego samego typu, np. short *p, *q, wyrażenie q - p oznacza liczbę, o ile odległości short jeden wskaźnik różni się od drugiego.
+* Wskaźniki można porównywać na ich adresy operatorami ==, <, >, <=, >=, !=.
+* W przypadku tablicy, np. int A[10]; symbol A jest jednocześnie wskaźnikiem na jej pierwszy element, tzn. np. *A oznacza A[0], a np. *(A+5) oznacza A[5]. Działa to też w drugą stronę, czyli &A[0] oznacza A, zaś &A[5] oznacza A+5.
+
+Napisz funkcję, która obliczy średnią arytmetyczną z elementów w tablicy, mając za argumenty jedynie 2 wskaźniki: do pierwszego i ostatniego elementu tablicy. Tablica powinna być typu double, a funkcja postaci `double srednia(double * poczatek, double * koniec)`.
+
+Przykładowo, dla tablicy `double A[20]`, wywołanie `srednia(A,A+19)` powinno dać wynik średniej dla całej tablicy, ale wywołanie `srednia(A+3,A+5)` powinno wyciągnąć średnią jedynie z komórek A[3], A[4], A[5]. Dzięki arytmetyce wskaźników, można w pętli iterować przy użyciu wskaźnika, tak jak przy użyciu liczby, np.
+
+    int A[10];
+    int * i;
+
+    for(i = A; i < A+10; ++i)
+    {
+    // *i to jest dostęp do elementu tablicy
+    }
+
 jest równoważne
-int A[10];
-int i;
 
-for(i = 0; i < 10; ++i)
-{
-// A[i] to jest dostęp do elementu tablicy
-}
+    int A[10];
+    int i;
+
+    for(i = 0; i < 10; ++i)
+    {
+    // A[i] to jest dostęp do elementu tablicy
+    }
+
 ewentualnie, wariant ze wskaźnikiem może być zapisany tak:
-int A[10];
-int * i;
 
-for(i = &A[0]; i < &A[10]; ++i)
-{
-// *i to jest dostęp do elementu tablicy
-}
+    int A[10];
+    int * i;
+
+    for(i = &A[0]; i < &A[10]; ++i)
+    {
+    // *i to jest dostęp do elementu tablicy
+    }
+
 Ćwiczenie 4:
 
 Plik cw4.c zawiera pasjonującą, głęboką i wciągającą grę komputerową. Zdobywca głównego skarbu otrzymuje 8 trylionów punktow!
