@@ -1,1 +1,3 @@
-# first_year
+# Wprowadzenie do programowania
+
+Pierwszy rok EPI.
