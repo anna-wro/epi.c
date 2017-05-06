@@ -5,8 +5,8 @@ Zmienne tekstowe, zwane napisami lub z języka angielskiego - stringami w język
 
 Poniższe deklaracje powinny być identyczne:
 
-char napis1[] = {'W', 'i', 't', 'a', 'j', '\0'};
-char napis2[] = "Witaj";
+    char napis1[] = {'W', 'i', 't', 'a', 'j', '\0'};
+    char napis2[] = "Witaj";
 
 Napisz program wykorzystujący funkcję strcmp (#include <string.h>) do stwierdzenia, czy tak właśnie jest.
 
@@ -18,13 +18,15 @@ Uwaga! Ze względu na to, że konsola w komputerach w pracowni używa formatu UT
 
 Aby wczytać tekst od użytkownika, najlepiej użyć funkcji fgets, jak na przykładzie:
 
-char bufor[100];
-fgets(bufor,100,stdin);
+    char bufor[100];
+    fgets(bufor,100,stdin); 
+
 Funkcja fgets będzie czytać znaki z wejścia do momentu natrafienia na znak '\n' (naciśnięcie klawisza Enter), albo do momentu osiągnięcia maksymalnej liczby znaków (w przykładzie 100). Pamiętaj, aby nie przepełnić tablicy, dlatego zawsze podawaj jako drugi argument liczbę nie większą niż faktyczny rozmiar tablicy. Zmienna stdin oznacza standardowe wejście, czyli klawiaturę.
 
 Wypisanie napisu na ekran najprościej zrobić tak:
 
-printf("%s",bufor);
+     printf("%s",bufor);
+
 Napisz program, który poprosi użytkownika o wprowadzenie imienia, np. Adam, a następnie wyświetli Cześć Adam.
 
 Napisy można modyfikować, odwołując się do poszczególnych znaków jak do elementów tablicy. Zmodyfikuj program tak, że po wczytaniu imienia, zmień pierwszą literę na 'X', a następnie wyświetl napis na ekranie. Następnie zmodyfikuj tak, że zmień dziesiątą literę na znak '\0'. Jak zachowa się printf przy wypisywaniu? Przetestuj dla napisu krótszego od i dłuższego niż 10 znaków.
