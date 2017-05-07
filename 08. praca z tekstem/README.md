@@ -33,7 +33,7 @@ Napisy można modyfikować, odwołując się do poszczególnych znaków jak do e
 
 ### Ćwiczenie 3:
 
-Funkcja strlen służy do określania ile znaków ma dany napis, czyli dokładnie na której pozycji znajduje się pierwszy znak '\0'.
+Funkcja `strlen` służy do określania ile znaków ma dany napis, czyli dokładnie na której pozycji znajduje się pierwszy znak '\0'.
 
 Napisz program, który wczyta tekst od użytkownika i wyświetli, ile on ma znaków, następnie napisz własną funkcję działającą tak jak strlen: w pętli zliczaj znaki aż natrafisz na znak zero (jego nie licz). Przetestuj, czy Twoja funkcja działa tak samo jak strlen.
 
@@ -41,7 +41,7 @@ Napisz teraz funkcję postaci int ile(char * tekst, char znak), która policzy i
 
 ### Ćwiczenie 4:
 
-Funkcja strcpy służy do kopiowania napisu do innej zmiennej. Napisz program, który przetestuje jej działanie. Pamiętaj, że zmienna docelowa musi być tablicą nie mniejszą niż rozmiar kopiowanego tekstu.
+Funkcja `strcpy` służy do kopiowania napisu do innej zmiennej. Napisz program, który przetestuje jej działanie. Pamiętaj, że zmienna docelowa musi być tablicą nie mniejszą niż rozmiar kopiowanego tekstu.
 
 Napisz własną funkcję działającą na zasadzie strcpy, ale odwracającą tekst przy kopiowaniu, czyli np. "Witaj!" w nowej zmiennej będzie "!jatiW".
 
@@ -50,7 +50,7 @@ Ewentualnie, można skorzystać z funkcji utf8chlen() dostępnej w tym pliku. Ob
 
 ### Ćwiczenie 5:
 
-Funkcja strcat realizuje konkatenację (łączenie) napisów. Napisz program, który zapyta użytkownika o imię, wczyta do jednej zmiennej, następnie zapyta o nazwisko, wczyta do drugiej zmiennej, w trzeciej zmiennej połączy imię z nazwiskiem (ze spacją pomiędzy) i tak wyświetli na ekranie.
+Funkcja `strcat` realizuje konkatenację (łączenie) napisów. Napisz program, który zapyta użytkownika o imię, wczyta do jednej zmiennej, następnie zapyta o nazwisko, wczyta do drugiej zmiennej, w trzeciej zmiennej połączy imię z nazwiskiem (ze spacją pomiędzy) i tak wyświetli na ekranie.
 
 ### Ćwiczenie 6:
 
