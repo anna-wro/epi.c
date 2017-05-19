@@ -43,7 +43,7 @@ struct para fabryka(int a, int b)
     
     return produkt;
 }
-Ćwiczenie 1
+### Ćwiczenie 1
 
 Utwórz strukturę książka, zawierającą pola: tytuł (char *), autor (char *), cena (int).
 W funkcji main() utwórz tablicę typu książka o pojemności przynajmniej na kilka książek.
@@ -52,7 +52,8 @@ W main() wypełnij tablicę książek używając fabryki, np. A[0] = fabryka("Pr
 Utwórz funkcję do zmiany ceny, np. void zmien_cene(struct ksiazka * k, int nowa_cena)
 Utwórz funkcję wypisującą tytuł, autora i cenę na ekran, np. void wypisz(struct ksiazka x)
 Napisz w main kod demonstrujący zmianę ceny i wypisywanie.
-Ćwiczenie 2
+
+### Ćwiczenie 2
 
 Wielkość struktur w języku C jest automatycznie zaokrąglana do równych 4 bajtów. Z tego powodu struktura:
 
