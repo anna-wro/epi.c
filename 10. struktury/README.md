@@ -2,11 +2,12 @@ Struktury pozwalają tworzyć własne typy danych w postaci kombinacji istnieją
 
 Strukturę deklaruje się tak:
 
-struct para
-{
-    int x;
-    int y;
-};
+    struct para
+    {
+        int x;
+        int y;
+    };
+
 W ten sposób stworzyliśmy nowy typ danych o nazwie para, który składa się z dwóch wartości typu int, dostępnych pod identyfikatorami odpowiednio x i y. Zwracam uwagę na średnik kończący deklarację struktury - to jest trochę inaczej niż przy np. if, for, while, gdzie po nawiasie zamykającym nie trzeba dawać średnika.
 
 Deklaracje struktur umieszcza się powyżej wszystkich funkcji w danym pliku, albo w osobnym pliku nagłówkowym, np. para.h, który potem dołącza się do głównego pliku poleceniem #include "para.h".
@@ -16,33 +17,36 @@ Mając już zadeklarowany nowy typ, możemy gdzieś w funkcjach utworzyć zmienn
 struct para p;
 Powyżej utworzyliśmy zmienną o nazwie p typu para. Dostęp do pól tej zmiennej jest za pomocą operatora kropka, np.
 
-p.x = 5;
+    p.x = 5;
+    p.y = 3;
 
-p.y = 3;
 Można też utworzyć wskaźnik, wówczas dostęp do pól jest z użyciem operatora strzałka:
 
-struct para * w = &p; //ustawienie wskaźnika w na adres zmiennej p
+    struct para * w = &p; //ustawienie wskaźnika w na adres zmiennej p
 
-w->x = -1; //zmiana pola x w zmiennej p
+    w->x = -1; //zmiana pola x w zmiennej p
 
-w->y = -4; //zmiana pola y w zmiennej p
+    w->y = -4; //zmiana pola y w zmiennej p
+
 Struktura może być argumentem funkcji, np.
 
-void wypisz(struct para a)
-{
-    printf("(%d, %d)", a.x, a.y);
-}
+    void wypisz(struct para a)
+    {
+        printf("(%d, %d)", a.x, a.y);
+    }
+
 Struktura może być też zwracana przez funkcję - taką funkcję żargonowo nazywa się fabryką, np.
 
-struct para fabryka(int a, int b)
-{
-    struct para produkt;
+    struct para fabryka(int a, int b)
+    {
+        struct para produkt;
+
+        produkt.x = a;
+        produkt.y = b;
+
+        return produkt;
+    }
     
-    produkt.x = a;
-    produkt.y = b;
-    
-    return produkt;
-}
 ### Ćwiczenie 1
 
 Utwórz strukturę książka, zawierającą pola: tytuł (char *), autor (char *), cena (int).
