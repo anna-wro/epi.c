@@ -81,13 +81,14 @@ widać, że ma rozmiar 8 bajtów, mimo, że oba pola w sumie zajmują tylko 5. W
     
     #pragma pack(pop)   //przywrócenie standardowych ustawień
 
-W tym artykule https://en.wikipedia.org/wiki/BMP_file_format znajduje się rysunek formatu pliku BMP. Utwórz strukturę (z włączonym zaokrągleniem do 1 bajtu), odpowiadającą nagłówkowi pliku BMP, przynajmniej do pola Image Height włącznie. Do zmiennych 2-bajtowych należy użyć unsigned short, do 4-bajtowych unsigned int. Następnie znajdź w Internecie lub utwórz samemu w programie graficznym plik BMP, otwórz go w swoim programie i wczytaj nagłówek np. tak:
+W tym artykule https://en.wikipedia.org/wiki/BMP_file_format znajduje się rysunek formatu pliku BMP. Utwórz strukturę (z włączonym zaokrągleniem do 1 bajtu), odpowiadającą nagłówkowi pliku BMP, przynajmniej do pola Image Height włącznie. Do zmiennych 2-bajtowych należy użyć `unsigned short`, do 4-bajtowych `unsigned int`. Następnie znajdź w Internecie lub utwórz samemu w programie graficznym plik BMP, otwórz go w swoim programie i wczytaj nagłówek np. tak:
 
-FILE * fp = fopen("obrazek.bmp","r");   // na platformie Windows koniecznie "rb"
+    FILE * fp = fopen("obrazek.bmp","r");   // na platformie Windows koniecznie "rb"
+    
+    struct naglowek n;                      // utworzenie zmiennej na złapanie nagłówka
+    
+    fread(&n, sizeof(n), 1, fp);            // wczytanie z pliku do n
+    
+    fclose(fp);                             // zamknięcie pliku
 
-struct naglowek n;                      // utworzenie zmiennej na złapanie nagłówka
-
-fread(&n, sizeof(n), 1, fp);            // wczytanie z pliku do n
-
-fclose(fp);                             // zamknięcie pliku
 Następnie wypisz na ekran zawartość pól File Size, Image Width, Image Height i sprawdź, czy się zgadzają.
