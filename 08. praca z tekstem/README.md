@@ -1,3 +1,4 @@
+# Praca z tekstem
 
 ### Ćwiczenie 1:
 
