@@ -1,3 +1,5 @@
+# Struktury 
+
 Struktury pozwalają tworzyć własne typy danych w postaci kombinacji istniejących typów prostych lub innych struktur. Bardziej zaawansowana praca ze strukturami nosi nazwę programowanie obiektowe i jest dostępna w językach takich jak np. C++, Java, C#, D, Smalltalk, PHP i innych. W języku C mechanizm struktur jest bardzo uproszczony, ale ciągle bardzo użyteczny.
 
 Strukturę deklaruje się tak:
