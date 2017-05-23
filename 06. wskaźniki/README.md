@@ -1,3 +1,5 @@
+# Wskaźniki
+
 ### Ćwiczenie 1:
 
 Plik [cw1.c](https://github.com/anna-wro/epi.c/blob/master/06.%20wska%C5%BAniki/cw1.c) demonstruje użycie wskaźników.
