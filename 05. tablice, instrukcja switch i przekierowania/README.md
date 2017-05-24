@@ -1,3 +1,5 @@
+# Tablice, instrukcja switch i przekierowania
+
 Podręcznik Wikibooks: [tablice](https://pl.wikibooks.org/wiki/C/Tablice), [switch](https://pl.wikibooks.org/wiki/C/Instrukcje_steruj%C4%85ce#switch), [continue](https://pl.wikibooks.org/wiki/C/Instrukcje_steruj%C4%85ce#continue). Wikipedia: [Sito Erastotenesa](https://pl.wikipedia.org/wiki/Sito_Eratostenesa).
 
 ### **Ćwiczenie 1:**
