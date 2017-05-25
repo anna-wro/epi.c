@@ -1,3 +1,5 @@
+# Typy danych, zmienne i operatory
+
 ### **Ćwiczenie 1**
 
 1. Zapoznaj się z programem zad1.c, skompiluj go i uruchom.
