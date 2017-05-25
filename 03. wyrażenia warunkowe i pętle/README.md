@@ -1,3 +1,5 @@
+# Wyrażenia warunkowe i pętle
+
 [Instrukcje sterujące](https://pl.wikibooks.org/wiki/C/Instrukcje_steruj%C4%85ce) (`if`, `for` i inne) w podręczniku Wikibooks.
 
 ### **Ćwiczenie 1:**
