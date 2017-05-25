@@ -1,3 +1,5 @@
+# Pętle, funkcje i procedury
+
 O tworzeniu własnych [funkcji](https://pl.wikibooks.org/wiki/C/Funkcje) w podręczniku Wikibooks.
 
 ### **Ćwiczenie 1:**
