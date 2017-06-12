@@ -57,22 +57,24 @@ Zaalokowaną pamięć trzeba zwolnić po skończeniu pracy, służy do tego funk
     //coś robię z tym blokiem
     
     free(p);
+    
 Aby funkcja free() zadziałała, trzeba podać jej adres początku bloku, zwrócony przez malloc(), calloc() lub realloc(). Z tego powodu nie wolno "zgubić" tego adresu - zawsze przynajmniej jeden wskaźnik powinien trzymać ten adres od alokacji aż do zwolnienia.
 
 wycieki pamięci i inne zagrożenia
 
 Wyciekiem pamięci nazywamy sytuację, kiedy zaalokowana pamięć nie została zwolniona, ponieważ zgubił się wskaźnik lub programista zwyczajnie zapomniał użyć free(). Jeśli taka pamięć używana jest do końca działania programu, to nie problem - po zakończeniu programu system operacyjny i tak wszystko posprząta: zwolni pamięć, pozamyka otwarte pliki itd. Gorzej jeśli mamy np. taką pętlę:
 
-int i;
-void * p;
-for(i = 0; i < 1000000; ++i)
-{
-    p = malloc(1000);
-    
-    //coś robimy z p
-    
-    //ale nie zwalniamy
-}
+    int i;
+    void * p;
+    for(i = 0; i < 1000000; ++i)
+    {
+        p = malloc(1000);
+
+        //coś robimy z p
+
+        //ale nie zwalniamy
+    }
+
 w każdej iteracji wskaźnik p zostaje nadpisany adresem nowego bloku o rozmiarze 1000 bajtów, a poprzednio używany blok staje się niedostępny, bo nie mamy już jego adresu. Po wykonaniu miliona iteracji mamy 1 gigabajt zaalokowanej, a niedostępnej do użytku pamięci!
 
 Podsumowując, zagrożenia związane z użyciem dynamicznej alokacji pamięci są następujące:
@@ -81,7 +83,7 @@ Funkcja realloc() może (ale nie musi) przesunąć blok w inne miejsce pamięci 
 Trzeba pamiętać, żeby zwalniać pamięć gdy tylko stanie się niepotrzebna. Pomyłki zdarzają się często, gdy programista korzysta z funkcji, która w ramach swojego działania alokuje pamięć na wynik (i zwraca do niej wskaźnik), a programista nie jest świadomy, że powinien sam tą pamięć zwolnić.
 Oferowana przez język C niezautomatyzowana obsługa dynamicznej alokacji pamięci wymaga od programisty uwagi i staranności w jej używaniu. Inne języki albo oferują możliwość zautomatyzowania tej obsłuji (jak np. C++), albo taką automatyzację narzucają (jak np. Java albo C#).
 
-Ćwiczenie 1
+### Ćwiczenie 1
 
 Narzędzie valgrind może służyć do wykrywania wycieków pamięci. Jest to maszyna wirtualna, która uruchamia w sobie program i obserwuje jak się zachowuje. Kto używa dynamicznej alokacji pamięci, powinien zawsze testować swój program narzędziami typu valgrind.
 
@@ -91,7 +93,8 @@ Używając SSH zaloguj się do swojego konta na wierzbie.
 Za pomocą np. mcedit, napisz prosty program, który używa malloc(), ale nie używa free(). Skompiluj.
 Uruchom program (./a.out) wewnątrz valgrinda poleceniem: $ valgrind --leak-check=yes ./a.out
 Teraz dopisz do programu odpowiednie wywołanie free(), skompiluj i uruchom w valgrindzie jeszcze raz. Porównaj uzyskane komunikaty.
-Ćwiczenie 2
+
+### Ćwiczenie 2
 
 Wczytaj plik tekstowy do pamięci, do uprzednio zaalokowanego bloku o takiej samej wielkości co plik.
 
@@ -106,7 +109,7 @@ int r = ftell(fp); // odczytanie aktualnej pozycji kursora
 fseek(fp, 0, SEEK_SET); // przesunięcie kursora na początek pliku
 W ten sposób w zmiennej r powinna znajdować się liczba bajtów pliku, którą można użyć jako argument dla malloc. Sam plik powinien być trzymany w tablicy typu char lub unsigned char, a przekopiowanie pliku do tablicy można zrobić w jednym wywołaniu funkcji fread().
 
-Ćwiczenie 3
+### Ćwiczenie 3
 
 Lista jest to taka struktura danych, w której każdy element składa się z pewnej wartości (jak komórka tablicy) oraz wskaźnika na następny element. Na końcu listy, gdy następnego elementu już nie ma, wskaźnik ten jest zwykle ustawiony na zero, co oznacza koniec listy.
 
