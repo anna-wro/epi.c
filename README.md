@@ -13,3 +13,8 @@ Tematy:
 07. Sprawdzian 1
 07. Praca z tekstem
 07. Praca z plikami
+07. Struktury
+07. Zadanie doskonalące 1
+07. Zadanie doskonalące 2
+07. Dynamiczna alokacja pamięci
+07. Egzamin
