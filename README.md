@@ -10,7 +10,7 @@ Tematy:
 04. [Pętle, funkcje i procedury](https://github.com/anna-wro/epi.c/tree/master/04.%20p%C4%99tle%2C%20funkcje%20i%20procedury)
 05. [Tablice, instrukcja switch i przekierowania](https://github.com/anna-wro/epi.c/tree/master/05.%20tablice%2C%20instrukcja%20switch%20i%20przekierowania)
 06. [Wskaźniki](https://github.com/anna-wro/epi.c/tree/master/06.%20wska%C5%BAniki)
-07. Sprawdzian 1
+07. [Sprawdzian 1](https://github.com/anna-wro/epi.c/tree/master/07.%20sprawdzian%201)
 07. Praca z tekstem
 07. Praca z plikami
 07. Struktury
