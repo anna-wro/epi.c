@@ -11,7 +11,7 @@ Tematy:
 05. [Tablice, instrukcja switch i przekierowania](https://github.com/anna-wro/epi.c/tree/master/05.%20tablice%2C%20instrukcja%20switch%20i%20przekierowania)
 06. [Wskaźniki](https://github.com/anna-wro/epi.c/tree/master/06.%20wska%C5%BAniki)
 07. [Sprawdzian 1](https://github.com/anna-wro/epi.c/tree/master/07.%20sprawdzian%201)
-07. Praca z tekstem
+07. [Praca z tekstem](https://github.com/anna-wro/epi.c/tree/master/08.%20praca%20z%20tekstem)
 07. Praca z plikami
 07. Struktury
 07. Zadanie doskonalące 1
