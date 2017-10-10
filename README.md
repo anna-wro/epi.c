@@ -14,7 +14,7 @@ Tematy:
 07. [Praca z tekstem](https://github.com/anna-wro/epi.c/tree/master/08.%20praca%20z%20tekstem)
 07. [Praca z plikami](https://github.com/anna-wro/epi.c/tree/master/09.%20praca%20z%20plikami)
 07. [Struktury](https://github.com/anna-wro/epi.c/tree/master/10.%20struktury)
-07. Zadanie doskonalące 1
+07. [Zadanie doskonalące 1](https://github.com/anna-wro/epi.c/tree/master/11.%20zadanie%20doskonal%C4%85ce%201)
 07. Zadanie doskonalące 2
 07. Dynamiczna alokacja pamięci
 07. Egzamin
