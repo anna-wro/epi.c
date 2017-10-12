@@ -16,5 +16,5 @@ Tematy:
 07. [Struktury](https://github.com/anna-wro/epi.c/tree/master/10.%20struktury)
 07. [Zadanie doskonalące 1](https://github.com/anna-wro/epi.c/tree/master/11.%20zadanie%20doskonal%C4%85ce%201)
 07. [Zadanie doskonalące 2](https://github.com/anna-wro/epi.c/tree/master/12.%20zadanie%20doskonal%C4%85ce%202)
-07. Dynamiczna alokacja pamięci
+07. [Dynamiczna alokacja pamięci](https://github.com/anna-wro/epi.c/tree/master/13.%20dynamiczna%20alokacja%20pami%C4%99ci)
 07. Egzamin
