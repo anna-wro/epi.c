@@ -60,7 +60,7 @@ Zaalokowaną pamięć trzeba zwolnić po skończeniu pracy, służy do tego funk
     
 Aby funkcja free() zadziałała, trzeba podać jej adres początku bloku, zwrócony przez malloc(), calloc() lub realloc(). Z tego powodu nie wolno "zgubić" tego adresu - zawsze przynajmniej jeden wskaźnik powinien trzymać ten adres od alokacji aż do zwolnienia.
 
-wycieki pamięci i inne zagrożenia
+### wycieki pamięci i inne zagrożenia
 
 Wyciekiem pamięci nazywamy sytuację, kiedy zaalokowana pamięć nie została zwolniona, ponieważ zgubił się wskaźnik lub programista zwyczajnie zapomniał użyć free(). Jeśli taka pamięć używana jest do końca działania programu, to nie problem - po zakończeniu programu system operacyjny i tak wszystko posprząta: zwolni pamięć, pozamyka otwarte pliki itd. Gorzej jeśli mamy np. taką pętlę:
 
