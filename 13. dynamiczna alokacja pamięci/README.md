@@ -11,7 +11,7 @@ Najprostszym takim problemem jest wczytanie pliku z dysku do pamięci programu. 
 
 Ponadto na zajęciach ASD zapoznają się Państwo z rozmaitymi złożonymi strukturami danych, jak listy, drzewa, grafy i inne. Kształt takiej struktury też często będzie zależał od rozwiązywanego problemu i dynamiczna alokacja będzie niezbędna, żeby odpowiednią taką strukturę utworzyć.
 
-malloc
+### malloc
 
 W języku C pamięć dynamicznie tworzy się funkcją malloc() (#include <stdlib.h>), jak np.:
 
@@ -35,7 +35,7 @@ W praktyce funkcję malloc() wywołuje się najczęściej w taki sposób:
     int * a = malloc(600 * sizeof(int));
 w ten sposób zaalokowaliśmy tablicę na 600 int-ów, bez konieczności pamiętania, ile bajtów ma int.
 
-realloc
+### realloc
 
 Jeśli w trakcie pracy z programem trzeba zwiększyć rozmiar danego bloku, służy do tego funkcja realloc():
 
@@ -48,7 +48,7 @@ Blok o początkowej wielkości 100 bajtów został powiększony do 200 bajtów. 
 
 Funkcją realloc można też zmniejszać rozmiar bloku, wówczas raczej nie nastąpi jego przeniesienie w inne miejsce pamięci.
 
-free
+### free
 
 Zaalokowaną pamięć trzeba zwolnić po skończeniu pracy, służy do tego funkcja free():
 
